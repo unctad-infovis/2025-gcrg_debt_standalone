@@ -148,14 +148,14 @@ export function FocusContextProvider({ children }) {
     if (typeof analytics !== 'undefined') {
       // Only track user initiated changes.
       if (changeIdx.current >= 2) {
-        analytics('event', 'Focus', { event_category: '2023-gcrg_debt', event_label: context.id.id, transport_type: 'beacon' });
+        analytics('event', 'Focus', { event_category: '2025-gcrg_debt_standalone', event_label: context.id.id, transport_type: 'beacon' });
         if (context.comparisons[0]) {
-          analytics('event', 'Comparison 1', { event_category: '2023-gcrg_debt', event_label: context.comparisons[0].id, transport_type: 'beacon' });
+          analytics('event', 'Comparison 1', { event_category: '2025-gcrg_debt_standalone', event_label: context.comparisons[0].id, transport_type: 'beacon' });
           if (context.comparisons[1]) {
-            analytics('event', 'Comparison 2', { event_category: '2023-gcrg_debt', event_label: context.comparisons[1].id, transport_type: 'beacon' });
-            analytics('event', 'Selection 1', { event_category: '2023-gcrg_debt', event_label: `${context.id.id},${context.comparisons[0].id},${context.comparisons[1].id}`, transport_type: 'beacon' });
+            analytics('event', 'Comparison 2', { event_category: '2025-gcrg_debt_standalone', event_label: context.comparisons[1].id, transport_type: 'beacon' });
+            analytics('event', 'Selection 1', { event_category: '2025-gcrg_debt_standalone', event_label: `${context.id.id},${context.comparisons[0].id},${context.comparisons[1].id}`, transport_type: 'beacon' });
           } else {
-            analytics('event', 'Selection 2', { event_category: '2023-gcrg_debt', event_label: `${context.id.id},${context.comparisons[0].id}`, transport_type: 'beacon' });
+            analytics('event', 'Selection 2', { event_category: '2025-gcrg_debt_standalone', event_label: `${context.id.id},${context.comparisons[0].id}`, transport_type: 'beacon' });
           }
         }
       }

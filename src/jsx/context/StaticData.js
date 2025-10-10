@@ -8,7 +8,7 @@ export const StaticDataContext = createContext({});
 
 const fetchData = (name, setValue) => {
   const data_file = window.location.href.includes('unctad.org')
-    ? `https://storage.unctad.org/2023-gcrg_debt/assets/data/${name}`
+    ? `https://storage.unctad.org/2025-gcrg_debt_standalone/assets/data/${name}`
     : `./assets/data/${name}`;
   try {
     fetch(data_file)

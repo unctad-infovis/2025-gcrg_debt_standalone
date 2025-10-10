@@ -32,7 +32,7 @@ export function MetricContextProvider({ children }) {
     if (typeof analytics !== 'undefined') {
       // Only track user initiated changes.
       if (changeIdx.current >= 2) {
-        analytics('event', 'Metric', { event_category: '2023-gcrg_debt', event_label: context.metricInfo.indicator_full, transport_type: 'beacon' });
+        analytics('event', 'Metric', { event_category: '2025-gcrg_debt_standalone', event_label: context.metricInfo.indicator_full, transport_type: 'beacon' });
       }
     }
     changeIdx.current += 1;

@@ -2,12 +2,30 @@
 
 @import "colors.less";
 
-#app-root-2023-gcrg_debt .app {
+#app-root-2025-gcrg_debt_standalone .app {
   // @import "basics.less";
   @import "coloring.less";
   @import "legend.less";
   font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  .backbutton_container {
+    position: absolute;
+    margin-top: -21px;
+    left: 100px;
+    a {
+      background-color: #eb1f48;
+      border-radius: 20px;
+      border: 0;
+      color :#fff;
+      font-size: 12px;
+      text-decoration: none;
+      font-style: italic;
+      font-weight: 100;
+      padding: 7px 30px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
   .source {
     color: rgba(0, 0.0, 0.0, 0.65);
     font-size: 14px;

@@ -25,7 +25,7 @@ function App() {
     <div className="app">
       <StaticDataContextProvider>
         <FocusContextProvider>
-          <div className="dashboard" id="app-root-2023-gcrg_debt-download">
+          <div className="dashboard" id="app-root-2025-gcrg_debt_standalone-download">
             <Filter />
             {height <= 900 && <Center radius={0} />}
             <div className="visuals">
@@ -45,6 +45,7 @@ function App() {
               UN Trade and Development (UNCTAD)
             </div>
           </div>
+          <div className="backbutton_container"><a type="button" href="https://unctad-infovis.github.io/2025-gcrg_debt_globe_standalone/">Back</a></div>
           <Download />
           <noscript>Your browser does not support JavaScript!</noscript>
         </FocusContextProvider>

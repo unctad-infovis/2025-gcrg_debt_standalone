@@ -13,7 +13,7 @@ function Download() {
 
   const onClick = () => {
     const captureElement = document.querySelector(
-      '#app-root-2023-gcrg_debt-download'
+      '#app-root-2025-gcrg_debt_standalone-download'
     );
 
     html2canvas(captureElement)

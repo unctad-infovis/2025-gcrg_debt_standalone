@@ -1,6 +1,6 @@
-# 2023-gcrg_debt
+# 2025-gcrg_debt_standalone
 
-**Live demo** https://unctad-infovis.github.io/2023-gcrg_debt/
+**Live demo** https://unctad-infovis.github.io/2025-gcrg_debt_standalone/
 
 ## Rights of usage
 
