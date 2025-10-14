@@ -1,5 +1,4 @@
-import React from 'react';
-// { useState, useRef, useLayoutEffect }
+import React, { useState, useEffect } from 'react';
 import '../styles/styles.less';
 
 // Load context
@@ -20,6 +19,44 @@ import Filter from './filters/Filter.jsx';
 
 function App() {
   const { smScreen, height } = viewPort();
+
+  const REDIRECT_URL = 'https://unctad-infovis.github.io/2025-gcrg_debt_globe_standalone/';
+  const IDLE_TIME = 2 * 60; // 2 minutes in seconds
+
+  const [timer, setTimer] = useState(IDLE_TIME);
+
+  // Reset timer on user activity
+  useEffect(() => {
+    const resetTimer = () => setTimer(IDLE_TIME);
+
+    window.addEventListener('mousemove', resetTimer);
+    window.addEventListener('keydown', resetTimer);
+    window.addEventListener('scroll', resetTimer);
+    window.addEventListener('touchstart', resetTimer);
+
+    return () => {
+      window.removeEventListener('mousemove', resetTimer);
+      window.removeEventListener('keydown', resetTimer);
+      window.removeEventListener('scroll', resetTimer);
+      window.removeEventListener('touchstart', resetTimer);
+    };
+  }, [IDLE_TIME]);
+
+  // Countdown timer
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimer(prev => Math.max(prev - 1, 0));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Redirect when timer reaches 0
+  useEffect(() => {
+    if (timer === 0) {
+      window.location.href = REDIRECT_URL;
+    }
+  }, [timer]);
 
   return (
     <div className="app">
