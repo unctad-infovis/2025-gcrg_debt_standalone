@@ -9,7 +9,7 @@ import { MetricContextProvider } from './context/Metric';
 import { PanelContextProvider } from './context/Panel';
 import viewPort from './helpers/viewPort';
 import Center from './radial/Radial.Center.jsx';
-import Download from './Download.jsx';
+// import Download from './Download.jsx';
 
 // Load components
 import Radial from './radial/Radial.jsx';
@@ -82,8 +82,8 @@ function App() {
               UN Trade and Development (UNCTAD)
             </div>
           </div>
-          <div className="backbutton_container"><a type="button" href="https://unctad-infovis.github.io/2025-gcrg_debt_globe_standalone/">Back</a></div>
-          <Download />
+          <div className="backbutton_container"><a type="button" href="https://unctad-infovis.github.io/2025-gcrg_debt_globe_standalone/">Return to start</a></div>
+          {/* <Download /> */}
           <noscript>Your browser does not support JavaScript!</noscript>
         </FocusContextProvider>
       </StaticDataContextProvider>
