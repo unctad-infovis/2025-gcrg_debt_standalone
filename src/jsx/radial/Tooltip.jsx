@@ -3,7 +3,20 @@ import PropTypes from 'prop-types';
 import formatNum from '../helpers/FormatNum.js';
 import { FocusContext } from '../context/Focus.js';
 
-function Tooltip({ data, offset, scroll }) {
+function Tooltip({
+  data = {
+    xPos: 0,
+    yPos: 0,
+    id: null,
+    value: null,
+    indicator_info: null,
+  },
+  offset = {
+    left: 0,
+    top: 0,
+  },
+  scroll = 0
+}) {
   const { id, setId } = useContext(FocusContext);
 
   if (!data) {
@@ -75,21 +88,6 @@ Tooltip.propTypes = {
     top: PropTypes.number,
   }),
   scroll: PropTypes.number,
-};
-
-Tooltip.defaultProps = {
-  data: {
-    xPos: 0,
-    yPos: 0,
-    id: null,
-    value: null,
-    indicator_info: null,
-  },
-  offset: {
-    left: 0,
-    top: 0,
-  },
-  scroll: 0,
 };
 
 export default Tooltip;

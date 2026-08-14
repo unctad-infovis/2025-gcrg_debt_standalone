@@ -72,13 +72,13 @@ Tooltip.propTypes = {
         id_display: PropTypes.string,
       }),
     }),
-  }).isRequired,
+  }),
   offset: PropTypes.shape({
     left: PropTypes.number,
     top: PropTypes.number,
-  }).isRequired,
-  width: PropTypes.number.isRequired,
-  scroll: PropTypes.number.isRequired,
+  }),
+  width: PropTypes.number,
+  scroll: PropTypes.number,
 };
 
 export default Tooltip;
